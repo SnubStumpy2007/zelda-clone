@@ -4,7 +4,8 @@ function love.load()
   player = require('modules.player')
 
   -- libraries
- anim8 = require('/libraries/anim8')
+ anim8 = require 'libraries/anim8'
+ 
 end
 
 function love.update(dt)
@@ -17,8 +18,11 @@ function love.update(dt)
     elseif love.keyboard.isDown('d') then
       player.x = player.x + player.speed
     end
+
+    player.anim:update(dt)
 end
 
 function love.draw()
-  love.graphics.draw(player.sprite, player.x, player.y)
+ -- love.graphics.draw(player.sprite, player.x, player.y)
+ player.anim:draw(player.spritSheet, player.x, player.y)
 end
