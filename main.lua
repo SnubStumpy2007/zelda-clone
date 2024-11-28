@@ -1,10 +1,11 @@
 
 function love.load()
+    -- libraries
+ anim8 = require 'libraries/anim8'
   -- modules
   player = require('modules.player')
 
-  -- libraries
- anim8 = require 'libraries/anim8'
+
  
 end
 
