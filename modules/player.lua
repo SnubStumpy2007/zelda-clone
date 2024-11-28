@@ -9,9 +9,12 @@ player.grid = anim8.newGrid(16, 16, player.spriteSheet:getWidth(), player.sprite
 
 -- animations
 player.animations = {}
-player.animations.stand = anim8.newAnimation(player.spriteSheet('1', 1), 0.2 )
+player.animations.down = anim8.newAnimation(player.grid('1-1', 1), 0.2)
+player.animations.right = anim8.newAnimation(player.grid('3-3', 1), 0.2)
+player.animations.left = anim8.newAnimation(player.grid('3-3', 1), 0.2)
+player.animations.up = anim8.newAnimation(player.grid('2-2', 1), 0.2)
 
+player.anim = player.animations.down
 
-player.anim = player.animations.stand
 
 return player

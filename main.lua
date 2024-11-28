@@ -24,6 +24,6 @@ function love.update(dt)
 end
 
 function love.draw()
- -- love.graphics.draw(player.sprite, player.x, player.y)
- player.anim:draw(player.spritSheet, player.x, player.y)
+--  love.graphics.draw(player.spriteSheet, player.x, player.y)
+ player.anim:draw(player.spriteSheet, player.x, player.y)
 end
