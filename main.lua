@@ -6,7 +6,11 @@ function love.load()
     -- libraries and maps
  anim8 = require 'libraries/anim8'
  sti = require('libraries.sti')
- gameMap = sti('maps/overworldMap.lua')
+
+
+
+ --maps
+ overworldMap = sti('maps/overworldMap.lua')
 
  
  -- windfield 
@@ -18,7 +22,7 @@ function love.load()
 
   -- modules
   player = require('modules.player')
-  walls = require('modules.walls')
+  walls = require('modules.maps.walls')
 
 
  
@@ -44,6 +48,9 @@ function love.update(dt)
 end
 
 function love.draw()
+
+  -- game maps
+  overworldMap:draw()
 
  player.anim:draw(player.spriteSheet, player.x , player.y, 0, 2.5, 2.5)
 end

@@ -37,6 +37,7 @@
     "project": "overworldMap.png.tiled-project",
     "recentFiles": [
     ],
+    "resizeMap.removeObjects": true,
     "tileset.embedInMap": true,
     "tileset.tileSize": {
         "height": 16,

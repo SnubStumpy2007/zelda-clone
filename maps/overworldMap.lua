@@ -131,7 +131,7 @@ return {
       id = 4,
       name = "Walls",
       class = "",
-      visible = true,
+      visible = false,
       opacity = 1,
       offsetx = 0,
       offsety = 0,
@@ -239,19 +239,6 @@ return {
           y = 144.667,
           width = 13.3333,
           height = 14.6667,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 12,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 448,
-          y = 145.333,
-          width = 14.6667,
-          height = 15.3333,
           rotation = 0,
           visible = true,
           properties = {}

@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="32" height="20" tilewidth="16" tileheight="16" infinite="0" nextlayerid="5" nextobjectid="13">
+ <editorsettings>
+  <export target="../maps/overworldMap.lua" format="lua"/>
+ </editorsettings>
  <tileset firstgid="1" name="overworld" tilewidth="16" tileheight="16" tilecount="480" columns="32" backgroundcolor="#ffffff">
   <image source="overworld.png" width="512" height="240"/>
  </tileset>
@@ -51,7 +54,7 @@
 415,416,415,416,415,416,415,416,415,416,415,416,0,0,0,0,0,0,0,0,0,0,415,416,415,416,415,416,415,416,415,416
 </data>
  </layer>
- <objectgroup id="4" name="Walls">
+ <objectgroup id="4" name="Walls" visible="0">
   <object id="4" x="18.6667" y="47.3333" width="138" height="84.6667"/>
   <object id="5" x="32.6667" y="190" width="161.333" height="128"/>
   <object id="6" x="-2" y="286" width="34.6667" height="32"/>
@@ -60,6 +63,5 @@
   <object id="9" x="223.333" y="111.333" width="16" height="48"/>
   <object id="10" x="47.3333" y="144.667" width="16" height="16"/>
   <object id="11" x="337.333" y="144.667" width="13.3333" height="14.6667"/>
-  <object id="12" x="448" y="145.333" width="14.6667" height="15.3333"/>
  </objectgroup>
 </map>
