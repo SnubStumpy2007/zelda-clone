@@ -3,10 +3,21 @@ function love.load()
   -- set window size
   love.window.setMode(1024, 640)
 
-    -- libraries
+    -- libraries and maps
  anim8 = require 'libraries/anim8'
+ gameMap = require('libraries.sti')
+
+ 
+ -- windfield 
+ wf = require('libraries/windfield')
+ world = wf.newWorld(0,0, true)
+ world:setGravity(0, 0)
+ world:addCollisionClass("Solid")
+ world:addCollisionClass("Player")
+
   -- modules
   player = require('modules.player')
+  walls = require('modules.walls')
 
 
  
@@ -17,7 +28,6 @@ function love.update(dt)
   if love.keyboard.isDown('w') then
     player.y = player.y - player.speed
     player.anim = player.animations.up
-   -- player.scaleX = -2
     elseif love.keyboard.isDown('a') then
       player.x = player.x - player.speed
       player.anim = player.animations.left
@@ -27,7 +37,6 @@ function love.update(dt)
     elseif love.keyboard.isDown('d') then
       player.x = player.x + player.speed
       player.anim = player.animations.right
-      -- player.scaleX = 2
     end
 
     player.anim:update(dt)

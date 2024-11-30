@@ -1,0 +1,45 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "",
+    "expandedProjectPaths": [
+        "."
+    ],
+    "file.lastUsedOpenFilter": "All Files (*)",
+    "fileStates": {
+        "": {
+            "scaleInDock": 1
+        },
+        "#Ground": {
+            "scaleInDock": 1
+        },
+        "#Overworld": {
+            "scaleInEditor": 1
+        },
+        "#overworld": {
+            "scaleInDock": 1
+        },
+        "overworldMap.tmx#overworld": {
+            "scaleInEditor": 1
+        }
+    },
+    "last.exportedFilePath": "D:/love2d/projects/zelda/zelda-clone/maps",
+    "last.imagePath": "D:/love2d/projects/zelda/zelda-clone/resources",
+    "map.lastUsedExportFilter": "All Files (*)",
+    "map.lastUsedFormat": "tmx",
+    "map.tileHeight": 16,
+    "map.tileWidth": 16,
+    "map.width": 32,
+    "openFiles": [
+    ],
+    "project": "overworldMap.png.tiled-project",
+    "recentFiles": [
+    ],
+    "tileset.embedInMap": true,
+    "tileset.tileSize": {
+        "height": 16,
+        "width": 16
+    }
+}

@@ -1,11 +1,10 @@
 player = {}
-player.x = 0
-player.y = 0
+player.x = 400
+player.y = 400
 player.speed = 5
 player.spriteSheet = love.graphics.newImage('/sprites/player.png')
 -- https://opengameart.org/content/zoria-tileset
 player.grid = anim8.newGrid(16, 16, player.spriteSheet:getWidth(), player.spriteSheet:getHeight())
---player.scaleX = 2
 
 -- animations
 player.animations = {}
