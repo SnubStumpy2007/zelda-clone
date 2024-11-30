@@ -5,7 +5,8 @@ function love.load()
 
     -- libraries and maps
  anim8 = require 'libraries/anim8'
- gameMap = require('libraries.sti')
+ sti = require('libraries.sti')
+ gameMap = sti('maps/overworldMap.lua')
 
  
  -- windfield 
