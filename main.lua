@@ -83,6 +83,7 @@ function love.draw()
   -- game maps
   overworldMap:draw(0, 0, 2.5, 2.5)
 
+ 
  player.anim:draw(player.spriteSheet, player.x , player.y, 0, 2.5, 2.5)
   world:draw()
 end

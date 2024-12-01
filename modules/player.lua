@@ -1,7 +1,7 @@
 player = {}
 player.x = 400
 player.y = 400
-player.speed = 5
+player.speed = 500
 player.spriteSheet = love.graphics.newImage('/sprites/player.png')
 -- https://opengameart.org/content/zoria-tileset
 player.grid = anim8.newGrid(16, 16, player.spriteSheet:getWidth(), player.spriteSheet:getHeight())
