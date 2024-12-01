@@ -29,20 +29,51 @@ function love.load()
 end
 
 function love.update(dt)
+  local isMoving = false
+  local vx = 0
+  local vy = 0
+
+
+
   -- movement
   if love.keyboard.isDown('w') then
-    player.y = player.y - player.speed
+    vy = -player.speed
+    --player.y = player.y - player.speed
     player.anim = player.animations.up
+    isMoving = true
     elseif love.keyboard.isDown('a') then
-      player.x = player.x - player.speed
+      vx = -player.speed
+     -- player.x = player.x - player.speed
       player.anim = player.animations.left
+      isMoving = true
     elseif love.keyboard.isDown('s') then
-      player.y = player.y + player.speed
+      vy = player.speed
+      --player.y = player.y + player.speed
       player.anim = player.animations.down
+      isMoving = true
     elseif love.keyboard.isDown('d') then
-      player.x = player.x + player.speed
+      vx = player.speed
+      --player.x = player.x + player.speed
       player.anim = player.animations.right
+      isMoving = true
     end
+
+    player.collider:setLinearVelocity(vx, vy)
+
+    -- set animation to default upon releasing movement keys
+    if isMoving == false then
+      player.anim:gotoFrame(1)
+    end
+  
+    --press the escape key to exit the game
+      if love.keyboard.isDown("escape") then
+        love.event.quit()
+      end
+  
+      world:update(dt)
+      player.x = player.collider:getX()
+      player.y = player.collider:getY()
+
 
     player.anim:update(dt)
 end
@@ -53,4 +84,5 @@ function love.draw()
   overworldMap:draw(0, 0, 2.5, 2.5)
 
  player.anim:draw(player.spriteSheet, player.x , player.y, 0, 2.5, 2.5)
+  world:draw()
 end
