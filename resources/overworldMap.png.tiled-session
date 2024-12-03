@@ -3,7 +3,7 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "",
+    "activeFile": "overworldMap.tmx",
     "expandedProjectPaths": [
         "."
     ],
@@ -21,7 +21,16 @@
         "#overworld": {
             "scaleInDock": 1
         },
+        "overworldMap.tmx": {
+            "scale": 1.8053710937499998,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 256.180018391302,
+                "y": 160.07789257315955
+            }
+        },
         "overworldMap.tmx#overworld": {
+            "scaleInDock": 1,
             "scaleInEditor": 1
         }
     },
@@ -33,9 +42,11 @@
     "map.tileWidth": 16,
     "map.width": 32,
     "openFiles": [
+        "overworldMap.tmx"
     ],
     "project": "overworldMap.png.tiled-project",
     "recentFiles": [
+        "overworldMap.tmx"
     ],
     "resizeMap.removeObjects": true,
     "tileset.embedInMap": true,

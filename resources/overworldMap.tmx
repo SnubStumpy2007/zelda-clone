@@ -54,7 +54,7 @@
 415,416,415,416,415,416,415,416,415,416,415,416,0,0,0,0,0,0,0,0,0,0,415,416,415,416,415,416,415,416,415,416
 </data>
  </layer>
- <objectgroup id="4" name="Walls" visible="0">
+ <objectgroup id="4" name="Walls">
   <object id="4" x="18.6667" y="47.3333" width="138" height="84.6667"/>
   <object id="5" x="32.6667" y="190" width="161.333" height="128"/>
   <object id="6" x="-2" y="286" width="34.6667" height="32"/>

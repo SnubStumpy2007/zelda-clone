@@ -6,6 +6,9 @@ function love.load()
     -- libraries and maps
  anim8 = require 'libraries/anim8'
  sti = require('libraries.sti')
+ --camera
+ camera = require 'libraries.camera'
+ cam = camera()
 
 
 
@@ -74,16 +77,27 @@ function love.update(dt)
       player.x = player.collider:getX()
       player.y = player.collider:getY()
 
+       -- gamera
+
 
     player.anim:update(dt)
+
+    -- camera
+    
 end
 
 function love.draw()
 
-  -- game maps
-  overworldMap:draw(0, 0, 2.5, 2.5)
+  cam:attach()
 
- 
- player.anim:draw(player.spriteSheet, player.x , player.y, 0, 2.5, 2.5)
+    
+      -- game maps
+  overworldMap:drawLayer(overworldMap.layers["Ground"])
+  overworldMap:drawLayer(overworldMap.layers["Buildings and Terain"])
+
+ player.anim:draw(player.spriteSheet, player.x , player.y) --, 0, 2.5, 2.5
   world:draw()
+cam:detach()
+
+
 end
