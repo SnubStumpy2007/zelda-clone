@@ -77,19 +77,18 @@ function love.update(dt)
       player.x = player.collider:getX()
       player.y = player.collider:getY()
 
-       -- gamera
-
 
     player.anim:update(dt)
 
     -- camera
+    cam:lookAt(player.x, player.y)
     
 end
 
 function love.draw()
 
   cam:attach()
-
+  cam:zoomTo(2.5)
     
       -- game maps
   overworldMap:drawLayer(overworldMap.layers["Ground"])
