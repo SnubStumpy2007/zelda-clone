@@ -1,11 +1,11 @@
 player = {}
-player.x = 400
-player.y = 400
-player.speed = 500
+player.x = 207
+player.y = 160
+player.speed = 190
 player.spriteSheet = love.graphics.newImage('/sprites/player.png')
 -- https://opengameart.org/content/zoria-tileset
 player.grid = anim8.newGrid(16, 16, player.spriteSheet:getWidth(), player.spriteSheet:getHeight())
-player.collider = world:newBSGRectangleCollider(400, 400, 16, 16, 10) -- 430
+player.collider = world:newBSGRectangleCollider(207, 160, 16, 16, 10) -- 430
 player.collider:setFixedRotation(true)
 player.collider:setCollisionClass("Player")
 
