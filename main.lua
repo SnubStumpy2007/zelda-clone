@@ -84,8 +84,8 @@ function love.update(dt)
     cam:lookAt(player.x, player.y)
 
     -- check for width and height of screen
-    local w = love.graphics.getWidth()
-    local h = love.graphics.getHeight()
+    local w = love.graphics.getPixelWidth()
+    local h = love.graphics.getPixelHeight()
 
     if cam.x > w/2 then
       cam.x = w/2
