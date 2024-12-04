@@ -94,7 +94,7 @@ function love.draw()
   overworldMap:drawLayer(overworldMap.layers["Ground"])
   overworldMap:drawLayer(overworldMap.layers["Buildings and Terain"])
 
- player.anim:draw(player.spriteSheet, player.x , player.y) --, 0, 2.5, 2.5
+ player.anim:draw(player.spriteSheet, player.x , player.y, nil, nil, nil, 8, 8) --, 0, 2.5, 2.5
   world:draw()
 cam:detach()
 
