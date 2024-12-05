@@ -3,6 +3,7 @@ function love.load()
   -- set window size
   love.window.setMode(1024, 640)
 
+
     -- libraries and maps
  anim8 = require 'libraries/anim8'
  sti = require('libraries.sti')
@@ -84,13 +85,20 @@ function love.update(dt)
     cam:lookAt(player.x, player.y)
 
     -- check for width and height of screen
-    local w = love.graphics.getPixelWidth()
-    local h = love.graphics.getPixelHeight()
+    local w = overworldMap.width * overworldMap.tilewidth
+    local h = overworldMap.height * overworldMap.tileheight
 
     if cam.x > w/2 then
       cam.x = w/2
     end
     
+end
+
+function love.keypressed(key, scancode, isrepeat)
+	if key == "f11" then
+		fullscreen = not fullscreen
+		love.window.setFullscreen(fullscreen, "exclusive")
+	end
 end
 
 function love.draw()
