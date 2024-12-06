@@ -85,11 +85,28 @@ function love.update(dt)
     cam:lookAt(player.x, player.y)
 
     -- check for width and height of screen
-    local w = overworldMap.width * overworldMap.tilewidth
-    local h = overworldMap.height * overworldMap.tileheight
+    local w = love.graphics.getWidth()
+    local h = love.graphics.getHeight()
 
-    if cam.x > w/2 then
+    if cam.x < w/2 then
       cam.x = w/2
+    end
+
+    if cam.y < h/2 then
+      cam.y = h/2
+    end
+
+    local mapW = overworldMap.width * overworldMap.tilewidth
+    local mapH = overworldMap.height * overworldMap.tileheight
+
+    -- right border
+    if cam.x > (mapW - w/2) then
+      cam.x = (mapW - w/2)
+    end
+
+    -- bottom border
+    if cam.y > (mapH - h/2) then
+      cam.y = (mapH - h/2)
     end
     
 end
