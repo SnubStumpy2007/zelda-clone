@@ -82,11 +82,12 @@ function love.update(dt)
     player.anim:update(dt)
 
     -- camera
+    -- camera resources https://www.youtube.com/watch?v=F3zKl70RJlk
     cam:lookAt(player.x, player.y)
 
     -- check for width and height of screen
-    local w = love.graphics.getWidth()
-    local h = love.graphics.getHeight()
+    local w = love.graphics.getWidth() / 2.5
+    local h = love.graphics.getHeight() / 2.5
 
     if cam.x < w/2 then
       cam.x = w/2
