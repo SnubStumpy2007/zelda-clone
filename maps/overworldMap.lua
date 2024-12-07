@@ -10,7 +10,7 @@ return {
   tilewidth = 16,
   tileheight = 16,
   nextlayerid = 5,
-  nextobjectid = 13,
+  nextobjectid = 38,
   properties = {},
   tilesets = {
     {
@@ -131,7 +131,7 @@ return {
       id = 4,
       name = "Walls",
       class = "",
-      visible = false,
+      visible = true,
       opacity = 1,
       offsetx = 0,
       offsety = 0,

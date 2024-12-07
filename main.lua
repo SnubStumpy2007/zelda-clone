@@ -42,25 +42,27 @@ function love.update(dt)
   -- movement
   if love.keyboard.isDown('w') then
     vy = -player.speed
-    --player.y = player.y - player.speed
+    player.dir = "up"
     player.anim = player.animations.up
     isMoving = true
     elseif love.keyboard.isDown('a') then
       vx = -player.speed
-     -- player.x = player.x - player.speed
+     player.dir = "left"
       player.anim = player.animations.left
       isMoving = true
     elseif love.keyboard.isDown('s') then
       vy = player.speed
-      --player.y = player.y + player.speed
+      player.dir = "down"
       player.anim = player.animations.down
       isMoving = true
     elseif love.keyboard.isDown('d') then
       vx = player.speed
-      --player.x = player.x + player.speed
+      player.dir = "right"
       player.anim = player.animations.right
       isMoving = true
     end
+
+
 
     player.collider:setLinearVelocity(vx, vy)
 
@@ -80,6 +82,8 @@ function love.update(dt)
 
 
     player.anim:update(dt)
+
+
 
     -- camera
     -- camera resources https://www.youtube.com/watch?v=F3zKl70RJlk
@@ -117,10 +121,24 @@ function love.keypressed(key, scancode, isrepeat)
 		fullscreen = not fullscreen
 		love.window.setFullscreen(fullscreen, "exclusive")
 	end
+
+  if key == 'space' then
+    local px, py = player.collider:getPosition()
+    if player.dir == "up" then
+      local colliders = world:queryCircleArea(px, py, 20, {"Solid"})
+      if #colliders > 0 then
+        love.event.quit()
+      end
+    end
+
+  end
+
+
 end
 
 function love.draw()
 
+  
   cam:attach()
   cam:zoomTo(2.5)
     
