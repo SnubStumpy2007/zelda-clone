@@ -10,7 +10,7 @@ return {
   tilewidth = 16,
   tileheight = 16,
   nextlayerid = 7,
-  nextobjectid = 39,
+  nextobjectid = 40,
   properties = {},
   tilesets = {
     {
@@ -197,35 +197,6 @@ return {
     {
       type = "objectgroup",
       draworder = "topdown",
-      id = 5,
-      name = "Chest",
-      class = "",
-      visible = true,
-      opacity = 1,
-      offsetx = 0,
-      offsety = 0,
-      parallaxx = 1,
-      parallaxy = 1,
-      properties = {},
-      objects = {
-        {
-          id = 38,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 288.25,
-          y = 255.5,
-          width = 32,
-          height = 33.25,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        }
-      }
-    },
-    {
-      type = "objectgroup",
-      draworder = "topdown",
       id = 4,
       name = "Walls",
       class = "",
@@ -337,6 +308,48 @@ return {
           y = 144.667,
           width = 13.3333,
           height = 14.6667,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 39,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 447.5,
+          y = 144.25,
+          width = 15.75,
+          height = 15.5,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 5,
+      name = "Chest",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 38,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 288.25,
+          y = 255.5,
+          width = 32,
+          height = 33.25,
           rotation = 0,
           visible = true,
           properties = {}
