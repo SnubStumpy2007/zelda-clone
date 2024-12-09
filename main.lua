@@ -127,8 +127,8 @@ function love.keypressed(key, scancode, isrepeat)
   if key == 'space' then
     local px, py = player.collider:getPosition()
     if player.dir == "up" then
-      local colliders = world:queryCircleArea(px, py, 20, {"Solid"})
-      if #colliders > 0 then
+      local colliders = world:queryCircleArea(px, py, 20, {"Chest"})
+      if colliders == "Chest" then
         love.event.quit()
       end
     end
@@ -147,6 +147,7 @@ function love.draw()
       -- game maps
   overworldMap:drawLayer(overworldMap.layers["Ground"])
   overworldMap:drawLayer(overworldMap.layers["Buildings and Terain"])
+  overworldMap:drawLayer(overworldMap.layers["Chest"])
 
  player.anim:draw(player.spriteSheet, player.x , player.y, nil, nil, nil, 8, 8) --, 0, 2.5, 2.5
   world:draw()

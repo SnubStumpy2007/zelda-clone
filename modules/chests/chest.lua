@@ -1,7 +1,7 @@
 chest = {}
--- chest = world:newRectangleCollider(20, 20, 96, 96)
--- chest:setType('static')
--- chest: setCollisionClass('Chest')
+
+-- chest.itemY = 0
+-- chest.item.key = love.graphics.newImage('/sprites/key.png')
 
 if overworldMap.layers["Chest"] then
     for i, obj in pairs(overworldMap.layers["Chest"].objects) do
