@@ -127,8 +127,13 @@ function love.keypressed(key, scancode, isrepeat)
   if key == 'space' then
     local px, py = player.collider:getPosition()
     if player.dir == "up" then
-      local colliders = world:queryCircleArea(px, py, 20, {"Chest"})
-      if colliders == "Chest" then
+      local colliders = world:queryCircleArea(px, py, 20, {"Solid"})
+      if #colliders > 0 then
+        love.event.quit()
+      end
+    elseif player.dir == "up" then
+      local chestColliders = world:queryCircleArea(px, py, 20, {"Chest"})
+      if #chestColliders > 0 then
         love.event.quit()
       end
     end
