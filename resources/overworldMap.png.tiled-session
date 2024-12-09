@@ -22,11 +22,11 @@
             "scaleInDock": 1
         },
         "overworldMap.tmx": {
-            "scale": 1.8053710937499998,
-            "selectedLayer": 0,
+            "scale": 4,
+            "selectedLayer": 2,
             "viewCenter": {
-                "x": 411.2727862822524,
-                "y": 245.93281765564993
+                "x": 298.625,
+                "y": 260.25
             }
         },
         "overworldMap.tmx#overworld": {
@@ -35,7 +35,7 @@
         }
     },
     "last.exportedFilePath": "D:/love2d/projects/zelda/zelda-clone/maps",
-    "last.imagePath": "D:/love2d/projects/zelda/zelda-clone/resources",
+    "last.imagePath": "D:/love2d/projects/zelda/zelda-clone/resources/chest",
     "map.lastUsedExportFilter": "Lua files (*.lua)",
     "map.lastUsedFormat": "tmx",
     "map.tileHeight": 16,

@@ -23,10 +23,12 @@ function love.load()
  world:setGravity(0, 0)
  world:addCollisionClass("Solid")
  world:addCollisionClass("Player")
+ world:addCollisionClass("Chest")
 
   -- modules
   player = require('modules.player')
   walls = require('modules.maps.walls')
+  chest = require('modules.chests.chest')
 
 
  
