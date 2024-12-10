@@ -131,7 +131,7 @@ function love.keypressed(key, scancode, isrepeat)
       if #colliders > 0 then
         love.event.quit()
       end
-    elseif player.dir == "up" then
+    elseif player.dir == "down" then
       local chestColliders = world:queryCircleArea(px, py, 20, {"Chest"})
       if #chestColliders > 0 then
         love.event.quit()
